@@ -1,0 +1,44 @@
+><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button onclick="restarFecha()">restarFecha</button>
+</body>
+
+<script>
+    function sumarFecha(){
+        var fechaOrigina="2022-12-01 10:02:20";
+        var fecha = new Date(fechaOrigina);
+
+        /*Se captura la hora y se le resta o suma la cantidad*/
+        fecha.setHours(fecha.getHours()-3);
+        console.log("fecha original" ,fechaOrigina)
+        let fechaFinal=fecha.toLocaleDateString("en-EN")+" " +fecha.toLocaleTimeString("en-EN");        
+        console.log("Fecha sumanda las 3 horas ",fechaFinal )
+
+
+    
+    }
+
+    function restarFecha(){
+        var fechaOriginal="2022-12-01 10:02:20";
+
+        var arrayFecha= fechaOriginal.split(' ');
+        let hora;
+
+        if(arrayFecha.length>1){
+            hora= arrayFecha[1].split(':');
+            let horaSumada= (hora.length>0)?hora[0]-3:0
+            hora[0]=horaSumada;
+        }
+
+        console.log(arrayFecha[0]+" "+hora.join(':'))        
+    }
+</script>
+</html>
