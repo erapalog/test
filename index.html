@@ -16,7 +16,7 @@
         var fechaOrigina="2022-12-01 10:02:20";
         var fecha = new Date(fechaOrigina);
 
-        /*Se captura la hora y se le resta o suma la cantidad*/
+        /*Se captura la hora y se le resta o suma la cantidad add*/
         fecha.setHours(fecha.getHours()-3);
         console.log("fecha original" ,fechaOrigina)
         let fechaFinal=fecha.toLocaleDateString("en-EN")+" " +fecha.toLocaleTimeString("en-EN");        
