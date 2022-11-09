@@ -36,7 +36,7 @@ public class PerfilController {
 		
 		try {
 			List<Perfil> listaCriticidad = perfilServiceImp.findAll();
-			/* Condicional para identificar si se encuentran registros en BBDD */
+			/* Condicional para identificar si se encuentran registros en BBDD para prueba */
 			if (listaCriticidad == null) {
 				response = Response.getResponseBadRequest(null, CommonConstants.NO_FOUND);
 			} else {
